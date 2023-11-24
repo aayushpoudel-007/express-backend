@@ -1,11 +1,16 @@
 //importing the express framework
 const express = require("express");
+const dbConnect = require("./config/dbConnect");
 
 //creating an instance of the express application
 const app = express();
 
 //defining the port where the application will run
 const port = 5000;
+
+//database connection
+dbConnect();
+
 
 //setting up the server to listen on the port
 app.listen(port, () => {
@@ -15,4 +20,4 @@ app.listen(port, () => {
 //demo root directory route
 app.get("/", (req, res) => {
     res.send("Hello World!")
-})
+});

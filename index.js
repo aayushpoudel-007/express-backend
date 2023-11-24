@@ -12,3 +12,7 @@ app.listen(port, () => {
     console.log(`Server is up and running on port ${port}`)
 });
 
+//demo root directory route
+app.get("/", (req, res) => {
+    res.send("Hello World!")
+})

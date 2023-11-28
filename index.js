@@ -19,5 +19,7 @@ app.listen(port, () => {
 
 //demo root directory route
 app.get("/", (req, res) => {
-    res.send("Hello World!")
+    res.send("Hello World!");
 });
+
+app.use("/api/user", require("./route/userRoute"));

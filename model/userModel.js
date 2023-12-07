@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
 
-    firstName:{
+    fName:{
 
         type: String,
 
@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
 
     },
 
-    lastName:{
+    lName:{
 
         type: String,
 
@@ -35,3 +35,6 @@ const userSchema = new mongoose.Schema({
     },
 
 });
+
+const user = mongoose.model("user", userSchema);
+module.exports = user;

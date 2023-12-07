@@ -11,6 +11,9 @@ const port = 5000;
 //database connection
 dbConnect();
 
+//accepting json data
+app.use(express.json());
+
 
 //setting up the server to listen on the port
 app.listen(port, () => {
@@ -22,4 +25,4 @@ app.get("/", (req, res) => {
     res.send("Hello World!");
 });
 
-app.use("/api/user", require("./route/userRoute"));
+app.use("/api/user/register", require("./route/userRoute"));
